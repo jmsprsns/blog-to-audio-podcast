@@ -1,0 +1,115 @@
+/**
+ * The Audio box in the post editor and the Audio column on the posts list.
+ */
+
+/* Audio box */
+.btap-box .btap-audio {
+	display: block;
+	width: 100%;
+	height: 40px;
+	margin: 4px 0 8px;
+}
+
+.btap-box p { margin: 8px 0; }
+
+.btap-meta {
+	color: #646970;
+	font-size: 12px;
+}
+
+.btap-state {
+	display: flex;
+	align-items: flex-start;
+	gap: 6px;
+	line-height: 1.5;
+}
+
+.btap-state svg {
+	flex: none;
+	margin-top: 2px;
+	color: var(--wp-admin-theme-color, #3858e9);
+}
+
+.btap-state-warn { color: #8a6100; }
+.btap-state-warn svg { color: #dba617; }
+
+.btap-state-error { color: #8a2424; }
+.btap-state-error svg { color: #d63638; }
+
+.btap-note {
+	color: #646970;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.btap-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 12px;
+}
+
+.btap-actions .button {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.btap-skip {
+	margin: 12px 0 0;
+	padding-top: 10px;
+	border-top: 1px solid #f0f0f1;
+}
+
+.btap-progress {
+	height: 6px;
+	margin: 6px 0 8px;
+	overflow: hidden;
+	border-radius: 999px;
+	background: #f0f0f1;
+}
+
+.btap-progress span {
+	display: block;
+	height: 100%;
+	border-radius: 999px;
+	background: var(--wp-admin-theme-color, #3858e9);
+	transition: width .4s ease;
+}
+
+.btap-spin { animation: btap-spin 1s linear infinite; }
+
+@keyframes btap-spin {
+	to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.btap-spin { animation: none; }
+	.btap-progress span { transition: none; }
+}
+
+/* Posts list column */
+.fixed .column-btap_audio { width: 82px; }
+
+.btap-col-head {
+	display: inline-flex;
+	vertical-align: middle;
+}
+
+.btap-col {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	font-size: 12px;
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+.btap-col-good svg { color: #00a32a; }
+.btap-col-warn { color: #8a6100; }
+.btap-col-warn svg { color: #dba617; }
+.btap-col-bad { color: #8a2424; }
+.btap-col-bad svg { color: #d63638; }
+.btap-col-busy svg { color: var(--wp-admin-theme-color, #3858e9); }
+.btap-col-muted,
+.btap-col-none { color: #8c8f94; }

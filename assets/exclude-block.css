@@ -1,0 +1,31 @@
+/**
+ * The "Exclude from audio" block in the editor only. On the page it adds no
+ * markup or styles.
+ */
+
+.btap-exclude {
+	position: relative;
+	padding: 28px 16px 8px;
+	border: 1px dashed rgba(127, 127, 127, .55);
+	border-radius: 6px;
+}
+
+.btap-exclude-label {
+	position: absolute;
+	top: 6px;
+	left: 12px;
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: .02em;
+	text-transform: uppercase;
+	opacity: .75;
+}
+
+.btap-exclude-label svg {
+	width: 14px;
+	height: 14px;
+}
